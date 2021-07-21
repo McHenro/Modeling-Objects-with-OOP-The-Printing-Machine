@@ -1,0 +1,112 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-compatible" content = "IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>grid</title>
+        
+        <style>
+                            :root {
+                --main-radius: 8px;
+                --main-padding: 5px;
+            }
+
+            .container {
+                display: grid;
+                height: 100vh;
+                grid-template-columns: 1.2fr 5fr 1.2fr;
+                grid-template-rows: 0.5fr 0.5fr 5fr 0.5fr;
+                grid-template-areas: "header header header" "sidebar navigation ads" "sidebar main ads" "footer footer footer";
+                grid-gap: 1.25rem;
+                font-family: "Inter", sans-serif;
+                font-weight: 800;
+            
+            }
+
+            header {
+                background: #ffd16f;
+                grid-area: header;
+                border-radius: var(--main-radius);
+                padding-top: var(--main-padding);
+                border-style: solid;
+                border-color: red;
+            }
+
+            #main {
+                background: #cbaed1;
+                grid-area: main;
+                border-radius: var(--main-radius);
+                padding-top: var(--main-padding);
+                border-style: solid;
+                border-color: red;
+            }
+
+            #navigation {
+                background: #7f8994;
+                grid-area: navigation;
+                border-radius: var(--main-radius);
+                padding-top: var(--main-padding);
+                border-style: solid;
+                border-color: red;
+            }
+
+            #sidebar {
+                background: #6ffff3;
+                grid-area: sidebar;
+                border-radius: var(--main-radius);
+                padding-top: var(--main-padding);
+                border-style: solid;
+                border-color: red;
+            }
+
+            #ads {
+                background: #6ffff3;
+                grid-area: ads;
+                border-radius: var(--main-radius);
+                padding-top: var(--main-padding);
+                border-style: solid;
+                border-color: red;
+            }
+
+            #footer {
+                background: #7f8994;
+                grid-area: footer;
+                border-radius: var(--main-radius);
+                padding-top: var(--main-padding);
+                border-style: solid;
+                border-color: red;
+            }
+            @media only screen and (max-width:750px){
+            .container{
+                grid-template-columns: 1.5fr 5fr;
+                grid-template-rows: 0.5fr 0.5fr 7fr 0.5fr;
+                grid-template-areas: "header header" "navigation navigation" "sidebar main" "ads footer";
+            }
+            }
+
+
+            @media only screen and (max-width:450px){
+            .container{
+                grid-template-columns: 4fr;
+                grid-template-rows: 0.5fr 0.5fr 3fr 0.5fr 0.5fr 0.5fr;
+                grid-template-areas: "header" "navigation" "main" "sidebar" "ads" "footer";
+            }
+            }
+
+            </style>
+</head>
+<body>
+    <div class="container">
+    <header>header</header>
+    <div id="main">main</div>
+    <div id="sidebar">Sidebar</div>
+    <div id="ads">ads</div>
+    <div id="navigation">navigation</div>
+    <div id="footer">Footer</div>
+    
+        </div>
+</body>
+</html>
+
+

@@ -23,3 +23,5 @@ resources = {
     'paper': 100,
     'profit': 0
 }
+
+
