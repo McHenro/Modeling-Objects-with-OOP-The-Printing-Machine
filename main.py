@@ -99,7 +99,7 @@ class PrintingMachine:
                 self.main_func()       
         elif self.total_currency > self.your_price:
             naira_in_change = self.total_currency - self.your_price
-            print(f'and here is #{naira_in_change} Naira in change\n')
+            print(f'and here is #{naira_in_change} Naira in change.\nHere is your Project and Thank you for using our services.\n')
         
     #generating report for the user for colored operation or shutting down the machine.
     def  coloured_report(self):
@@ -112,7 +112,6 @@ class PrintingMachine:
               ---------------------------------
               paper:{self.initial_paper}pc, ink:{self.initial_ink}ml, profit:#{self.initial_profit}.
               ---------------------------------
-              Here is your Project and Thank you for using our services.
               ''')
         self.to_continue  =input("If you want to continue type 'yes' or 'no'\n")
         if  self.to_continue  == 'no':
@@ -131,7 +130,6 @@ class PrintingMachine:
               ---------------------------------
               paper:{self.initial_paper}pc, ink:{self.initial_ink}ml, profit:#{self.initial_profit}.
               ---------------------------------
-              Here is your Project and Thank you for using our services.
               ''')
         
         
